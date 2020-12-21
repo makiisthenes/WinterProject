@@ -1,2 +1,2 @@
 # WinterProject
-Winter Proejct that deals full stack application,
+Winter Project that deals full stack application,
