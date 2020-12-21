@@ -1,0 +1,30 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+.flex-container{
+  width: 100%;
+  height: inherit;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.flex-container>#name_container{
+  display: flex;
+  align-items: baseline;
+
+}
+button#name_submit{
+  margin-left: 10px;
+}
+
+div#credit{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 10px;
+}

@@ -1,0 +1,26 @@
+<%- include('../partials/header') %>
+<!-- This allows the extension of adding more scripts for a specific html page, such as a custom css or js file for this. -->
+<link rel="stylesheet" href="css/index.css" />
+</head>
+  <body>
+    <div class="flex-container">
+    <div id="login_container">
+        <!-- <img src="https://cdn.onlinewebfonts.com/svg/img_419978.png" alt="backend_image_outsource" width="40%"> -->
+        <!-- Enter your name is going to be used instead of an image -->
+
+      <div id="name_container">
+      <form name="name_form" method="post" action="/">
+        <input class="form-control" type="text" name="name_input" placeholder="Enter Name Here" autocomplete="off" autofocus required>
+        <button class="btn btn-primary mb-2" id="name_submit" type="submit" name="name">Submit</button>
+        <!-- We can pass in variables from the backend to be parsed in the front end html file sent to the user. -->
+      </form>
+    </div>
+    </div>
+  </div>
+  <div id="credit">
+    <small>Created by</small> Michael Peres |
+    <a href="mailto:ec20433@qmul.ac.uk"><small>Email me</small></a>
+  </div>
+  </body>
+  <%- include('../partials/foot_scripts') %>
+  </html>

@@ -1,0 +1,17 @@
+{
+  "name": "winterproject",
+  "version": "1.0.0",
+  "description": "This is an attempt to making an full stack web application this winter holiday.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "nodemon index.js"
+  },
+  "author": "Michael K Peres, Sarosh Rasool",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "titlecase": "^1.1.3"
+  }
+}
