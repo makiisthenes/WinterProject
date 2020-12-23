@@ -1,30 +1,122 @@
+/* We use flexbox features to sort out the css styling in this webpage, using
+the video https://www.youtube.com/watch?v=k32voqQhODc&t=1102s */
+/* TODO */
+/*
+  [] Adding responsiveness, by using max-width and min-width and things like that.
+  [] Learn about ajax, jquery and link between javascript and html properly, other than just functions.
+*/
+
 html, body {
   height: 100%;
   width: 100%;
-}
-
-.flex-container{
-  width: 100%;
-  height: inherit;
   background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
 }
-.flex-container>#name_container{
+
+.underline{
+  text-decoration: underline;
+}
+
+#title_bar{
+  width: 60%;
+  margin: auto;
+  text-align: center;
+}
+
+.column_layout{
   display: flex;
-  align-items: baseline;
+  align-items: stretch; /* default */
+}
+
+.code_font{
+  font-family: 'Inconsolata', monospace;
+}
+
+.login_wrapper{
+  flex: 3;
+  order: 2;
+  height: 550px;
+  margin: auto;
+  width: 40%;
+}
+.column1{
+  margin: 15px;
+  background-color: #ccc;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.sidebar-one{
+  flex: 1;
+  order: 1;
 
 }
-button#name_submit{
-  margin-left: 10px;
+
+.sidebar-two{
+  flex: 1;
+  order: 3;
+
+}
+
+#coding_image{
+  float: right;
+}
+
+.login_container{
+  background-color: #eee;
+  width: 100%;
+  // height: 100%;
+  position: relative;
+  top: 50%;
+  padding: 10px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.form-row{
+  display: flex;
+}
+
+.form-row input{
+  flex:1;
+}
+
+.form-row button{
+  flex:1;
+  margin-top: 10px;
+}
+
+.container2{
+  display: block;
+
 }
 
 div#credit{
   position: fixed;
   bottom: 0;
   right: 0;
+  padding: 5px;
   margin: 10px;
+  background-color: rgb(241, 230, 255, 0.8);
+}
+
+i#gh_anchor{
+  text-decoration: none;
+  color: black;
+}
+
+#notif_alert{
+  visibility: visible;
+  position: absolute;
+  bottom: 0;
+
+}
+
+#close_btn{
+  background: none;
+  border: none;
+  float: right;
+
+
 }

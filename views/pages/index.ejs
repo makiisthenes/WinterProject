@@ -1,26 +1,70 @@
 <%- include('../partials/header') %>
 <!-- This allows the extension of adding more scripts for a specific html page, such as a custom css or js file for this. -->
 <link rel="stylesheet" href="css/index.css" />
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap" rel="stylesheet">
 </head>
   <body>
-    <div class="flex-container">
-    <div id="login_container">
-        <!-- <img src="https://cdn.onlinewebfonts.com/svg/img_419978.png" alt="backend_image_outsource" width="40%"> -->
-        <!-- Enter your name is going to be used instead of an image -->
+    <!-- <img src="../resources/loader.gif" width="100px"> -->
+    <div id="title_bar">
+      <h1 class="display-4 underline">Full Stack Web App</h1>
+    </div>
+    <div class="column_layout">
+        <div class="login_wrapper">
+          <div class="login_container">
+              <!-- Enter your name is going to be used instead of an image -->
+            <form id="form_id" name="name_form" method="post" action="/">
+              <h4 class="code_font"> 3nter name to start! </h4>
+              <div class="form-row">
+                  <input id="name_input" class="form-control code_font" type="text" name="name_input" placeholder="Enter Name Here" autocomplete="off" autofocus required>
+              </div>
+              <div class="form-row">
+                <button class="btn btn-primary mb-2" id="name_submit" type="submit" name="name">Submit</button>
+              </div>
+              <!-- We can pass in variables from the backend to be parsed in the front end html file sent to the user. -->
+            </form>
+          </div>
+        </div>
+        <div class="sidebar-one column1">
+            <h3>What this Project is about?</h3>
+            <p> This project was initially made to be simply a project to learn about nodeJs and websites, in which I carried on, and made an interactive messaging app, that communicated directly with my nodejs server backend. To proceed you will need to enter an name, this is so that we can have a name to call you when messaging. This will take what you have said and return a arbitary sentence unless a descriptive word or noun is stated in which it will state something more tailored to the subject/ topic. </p>
+            </div>
+        <div class="sidebar-two column1">
+          <h3> This is another header.</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+               <img id="coding_image" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fthumbs.dreamstime.com%2Fz%2Fhtml-code-13860008.jpg&f=1&nofb=1" width="200px">
+               fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in c
+               ulpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+      </div>
+      <div class="container2 column1">
+        <h4>Container 2, which is not a flex box</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+             cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+              non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+      <div id="credit">
+          <small>Created by</small> <bold>Michael Peres</bold> |
+          <a href="mailto:ec20433@qmul.ac.uk">3mai1 me</a> |
+          <a href="https://github.com/makiisthenes" target="_blank"><i id="gh_anchor" class="fab fa-github"></i></a>
+          <!-- Add github anchor icon here and link to my github account. -->
+        </div>
 
-      <div id="name_container">
-      <form name="name_form" method="post" action="/">
-        <input class="form-control" type="text" name="name_input" placeholder="Enter Name Here" autocomplete="off" autofocus required>
-        <button class="btn btn-primary mb-2" id="name_submit" type="submit" name="name">Submit</button>
-        <!-- We can pass in variables from the backend to be parsed in the front end html file sent to the user. -->
-      </form>
-    </div>
-    </div>
-  </div>
-  <div id="credit">
-    <small>Created by</small> Michael Peres |
-    <a href="mailto:ec20433@qmul.ac.uk"><small>Email me</small></a>
-  </div>
+      <!-- These divs are all alert notifications [banners] related to the name input and random ones that are required. -->
+
+      <div id="error_toast"></div>
+      <div id="notif_alert" class="alert alert-secondary alert-dismissible fade show code_font" role="alert">
+        <strong>Thanks for checking my website out!</strong>, go check out my <a href="https://github.com/makiisthenes" target="_blank">other projects!</a>
+        <button id="close_btn" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"><i class="fas fa-times" onclick="close_button()"></button></i>
+      </div>
+
   </body>
   <%- include('../partials/foot_scripts') %>
+  <script src="main.js"></script>
   </html>
